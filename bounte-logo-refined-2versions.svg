@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="2000" height="2000" viewBox="0 0 2000 2000">
+  <defs>
+    <style>
+      :root {
+        --wall: #d9d0c2;
+        --paper: #eee9df;
+        --ink: #272522;
+        --soft: #7c756b;
+        --line: rgba(39, 37, 34, 0.12);
+      }
+
+      text {
+        font-family: "Avenir Next", "Helvetica Neue", Arial, sans-serif;
+        letter-spacing: 0;
+        text-rendering: geometricPrecision;
+      }
+
+      .bg { fill: var(--wall); }
+      .panel { fill: var(--paper); stroke: var(--line); stroke-width: 1; }
+      .title { fill: var(--soft); font-size: 22px; font-weight: 500; }
+      .note { fill: var(--soft); font-size: 17px; font-weight: 400; }
+      .caption { fill: var(--soft); font-size: 18px; font-weight: 400; }
+      .descriptor { fill: var(--ink); font-size: 22px; font-weight: 400; }
+      .mark-a {
+        fill: var(--ink);
+        font-size: 134px;
+        font-weight: 300;
+        letter-spacing: 20px;
+      }
+      .mark-b {
+        fill: var(--ink);
+        font-size: 150px;
+        font-weight: 300;
+        letter-spacing: 9px;
+      }
+      .erase { fill: var(--paper); }
+      .baseline { stroke: rgba(39, 37, 34, 0.08); stroke-width: 1; }
+    </style>
+  </defs>
+
+  <rect class="bg" width="2000" height="2000"/>
+  <text x="120" y="92" class="title">BOUNTE LOGO RE-STUDY / 两个精修方向</text>
+  <text x="120" y="126" class="note">原则：少动作、细比例、宽留白、只在必要位置制造空间开口</text>
+
+  <g transform="translate(120 230)">
+    <rect class="panel" width="1760" height="560"/>
+    <text x="64" y="62" class="title">VERSION 01 · STILL AXIS</text>
+    <text x="64" y="94" class="note">大写字标，偏国际空间设计事务所；只保留 O 的开口作为记忆点</text>
+    <g transform="translate(252 306)">
+      <text x="0" y="0" class="mark-a">BOUNTE</text>
+      <rect x="324" y="-104" width="44" height="25" class="erase"/>
+      <rect x="326" y="-108" width="14" height="34" class="erase"/>
+      <text x="1035" y="-106" class="descriptor">Space Design</text>
+      <line x1="0" y1="28" x2="1030" y2="28" class="baseline"/>
+    </g>
+    <text x="64" y="464" class="caption">关键词：克制、秩序、门头感、稳定、接近参考图气质</text>
+  </g>
+
+  <g transform="translate(120 1020)">
+    <rect class="panel" width="1760" height="560"/>
+    <text x="64" y="62" class="title">VERSION 02 · SOFT INTERVAL</text>
+    <text x="64" y="94" class="note">保留 Bounte 的大小写节奏，更温和；用轻微断口形成空间感</text>
+    <g transform="translate(252 320)">
+      <text x="0" y="0" class="mark-b">Bounte</text>
+      <rect x="205" y="-104" width="38" height="22" class="erase"/>
+      <rect x="207" y="-108" width="12" height="32" class="erase"/>
+      <rect x="653" y="-122" width="28" height="20" class="erase"/>
+      <text x="835" y="-118" class="descriptor">Space Design</text>
+      <line x1="0" y1="28" x2="960" y2="28" class="baseline"/>
+    </g>
+    <text x="64" y="464" class="caption">关键词：精品、生活方式、柔和空间、留白、适合官网与名片</text>
+  </g>
+</svg>

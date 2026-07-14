@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900">
+  <defs>
+    <style>
+      .word {
+        fill: none;
+        stroke: #2d2927;
+        stroke-width: 19;
+        stroke-linecap: butt;
+        stroke-linejoin: round;
+      }
+
+      .descriptor {
+        fill: #2d2927;
+        font-family: "Helvetica Neue", Arial, sans-serif;
+        font-size: 27px;
+        font-weight: 600;
+        letter-spacing: 0;
+      }
+    </style>
+  </defs>
+
+  <rect width="1600" height="900" fill="#aaa093"/>
+
+  <!-- 10 px module; the recurring one-module gap is the signature detail. -->
+  <g transform="translate(250 360)">
+    <!-- B: a 10 px negative-space hinge separates the two chambers. -->
+    <path class="word" d="M0 0 V140 M0 0 H48 C82 0 102 14 102 35 C102 56 82 70 48 70 H28 M38 70 H54 C92 70 114 84 114 105 C114 126 92 140 54 140 H0"/>
+
+    <!-- o: the opening shifts half a module to the right for optical movement. -->
+    <path class="word" d="M208 18 C180 22 162 46 162 78 C162 115 185 140 218 140 C251 140 274 115 274 78 C274 47 260 25 238 18"/>
+
+    <!-- u and n stay neutral to anchor the composition. -->
+    <path class="word" d="M330 15 V88 C330 120 352 140 385 140 C418 140 440 120 440 88 V15"/>
+    <path class="word" d="M520 140 V58 C520 31 541 15 575 15 C609 15 630 34 630 63 V140"/>
+
+    <!-- t: the crossbar meets the stem through a constructed 20 px channel. -->
+    <path class="word" d="M730 0 V140 M690 45 H720 M740 45 H780"/>
+
+    <!-- e: the one-module release at right prevents a dark junction. -->
+    <path class="word" d="M850 78 H948 M958 78 C955 39 928 15 890 15 C847 15 820 42 820 78 C820 116 849 140 891 140 C919 140 941 130 958 111"/>
+
+    <g transform="translate(1035 18)">
+      <text class="descriptor" x="0" y="0">Space</text>
+      <text class="descriptor" x="0" y="34">Design</text>
+    </g>
+  </g>
+</svg>

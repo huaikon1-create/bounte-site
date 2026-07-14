@@ -1,0 +1,112 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="2000" height="2000" viewBox="0 0 2000 2000">
+  <defs>
+    <style>
+      :root {
+        --bg: #e9e3d8;
+        --panel: #f4f0e8;
+        --ink: #22211f;
+        --muted: #777168;
+        --hair: #c9c0b4;
+      }
+
+      text {
+        font-family: Arial, "Helvetica Neue", sans-serif;
+        letter-spacing: 0;
+      }
+
+      .page-bg { fill: var(--bg); }
+      .panel { fill: var(--panel); stroke: rgba(34, 33, 31, 0.1); stroke-width: 1; }
+      .label { fill: var(--muted); font-size: 22px; font-weight: 400; }
+      .note { fill: var(--muted); font-size: 18px; font-weight: 400; }
+      .desc { fill: var(--ink); font-size: 22px; font-weight: 400; }
+      .word { fill: none; stroke: var(--ink); stroke-width: 18; stroke-linecap: butt; stroke-linejoin: round; }
+      .word-round { fill: none; stroke: var(--ink); stroke-width: 18; stroke-linecap: round; stroke-linejoin: round; }
+      .word-thin { fill: none; stroke: var(--ink); stroke-width: 13; stroke-linecap: butt; stroke-linejoin: round; }
+      .small { fill: var(--ink); font-size: 24px; font-weight: 400; }
+      .guide { fill: none; stroke: var(--hair); stroke-width: 1; opacity: 0.8; }
+    </style>
+  </defs>
+
+  <rect class="page-bg" width="2000" height="1600"/>
+  <text x="120" y="104" class="label">BOUNTE LOGO STUDY / 字母结构方案</text>
+  <text x="120" y="140" class="note">学习方向：几何字标、断口留白、空间开口、建筑秩序</text>
+
+  <g transform="translate(120 220)">
+    <rect class="panel" width="820" height="600" rx="0"/>
+    <text x="48" y="58" class="label">方案 01 · OPEN COURT</text>
+    <text x="48" y="94" class="note">圆形断口 + 等线宽，保留最接近参考图的克制感</text>
+    <g transform="translate(54 286) scale(0.82)">
+      <path class="word" d="M0 0 V126"/>
+      <path class="word" d="M0 0 H54 C86 0 104 18 104 42 C104 66 84 78 52 78 H0"/>
+      <path class="word" d="M0 64 H58 C92 64 116 82 116 104 C116 128 94 140 56 140 H0"/>
+      <path class="word" d="M190 10 A52 52 0 1 0 222 10"/>
+      <path class="word" d="M294 38 V86 C294 122 318 142 350 142 C382 142 406 122 406 86 V38"/>
+      <path class="word" d="M484 142 V58 C484 28 504 10 536 10 C568 10 588 28 588 58 V142"/>
+      <path class="word" d="M658 4 V136"/>
+      <path class="word" d="M624 48 H704"/>
+      <path class="word" d="M790 92 H898 C890 42 858 10 816 10 C770 10 738 42 738 76 C738 114 768 142 816 142 C846 142 870 132 888 112"/>
+      <text x="740" y="-22" class="small">Space Design</text>
+    </g>
+    <line x1="54" y1="430" x2="768" y2="430" class="guide"/>
+  </g>
+
+  <g transform="translate(1060 220)">
+    <rect class="panel" width="820" height="600" rx="0"/>
+    <text x="48" y="58" class="label">方案 02 · AXIS</text>
+    <text x="48" y="94" class="note">更建筑、更直线，像平面图里的轴线与开间</text>
+    <g transform="translate(54 286) scale(0.82)">
+      <path class="word" d="M0 0 V136"/>
+      <path class="word" d="M0 0 H58 C92 0 110 20 110 45 C110 70 90 84 56 84 H14"/>
+      <path class="word" d="M14 70 H58 C98 70 122 88 122 112 C122 136 98 148 58 148 H0"/>
+      <path class="word" d="M196 18 H244"/>
+      <path class="word" d="M186 18 A58 58 0 1 0 244 18"/>
+      <path class="word" d="M318 32 V94 C318 130 340 148 374 148 C408 148 430 130 430 94 V32"/>
+      <path class="word" d="M506 148 V54 C506 30 526 18 554 18 C584 18 602 32 602 60 V148"/>
+      <path class="word" d="M668 0 V148"/>
+      <path class="word" d="M632 48 H724"/>
+      <path class="word" d="M794 86 H898"/>
+      <path class="word" d="M794 86 C796 48 824 18 866 18 C902 18 926 42 930 76"/>
+      <path class="word" d="M794 86 C798 124 826 148 868 148 C894 148 914 138 930 120"/>
+      <text x="738" y="-22" class="small">Space Design</text>
+    </g>
+    <line x1="54" y1="430" x2="768" y2="430" class="guide"/>
+  </g>
+
+  <g transform="translate(120 1010)">
+    <rect class="panel" width="820" height="600" rx="0"/>
+    <text x="48" y="58" class="label">方案 03 · SOFT VOID</text>
+    <text x="48" y="94" class="note">更柔和的空间留白，适合偏住宅、生活方式气质</text>
+    <g transform="translate(54 286) scale(0.82)">
+      <path class="word-round" d="M0 0 V132"/>
+      <path class="word-round" d="M0 0 H48 C82 0 102 18 102 44 C102 70 80 84 48 84 H8"/>
+      <path class="word-round" d="M8 68 H58 C94 68 116 88 116 112 C116 136 92 148 54 148 H0"/>
+      <path class="word-round" d="M194 16 A54 54 0 1 0 224 16"/>
+      <path class="word-round" d="M296 34 V88 C296 126 322 148 354 148 C386 148 412 126 412 88 V34"/>
+      <path class="word-round" d="M490 148 V62 C490 34 512 16 544 16 C576 16 598 34 598 62 V148"/>
+      <path class="word-round" d="M666 2 V140"/>
+      <path class="word-round" d="M634 50 H710"/>
+      <path class="word-round" d="M788 90 H900 C894 48 862 16 818 16 C772 16 740 48 740 82 C740 122 772 148 818 148 C848 148 874 136 890 116"/>
+      <text x="742" y="-22" class="small">Space Design</text>
+    </g>
+    <line x1="54" y1="430" x2="768" y2="430" class="guide"/>
+  </g>
+
+  <g transform="translate(1060 1010)">
+    <rect class="panel" width="820" height="600" rx="0"/>
+    <text x="48" y="58" class="label">方案 04 · QUIET SIGN</text>
+    <text x="48" y="94" class="note">细笔画、宽字距，更接近精品空间事务所门头</text>
+    <g transform="translate(54 290) scale(0.78)">
+      <path class="word-thin" d="M0 0 V128"/>
+      <path class="word-thin" d="M0 0 H52 C82 0 100 18 100 42 C100 66 80 78 50 78 H0"/>
+      <path class="word-thin" d="M0 66 H56 C90 66 112 84 112 106 C112 130 88 142 52 142 H0"/>
+      <path class="word-thin" d="M202 12 A52 52 0 1 0 232 12"/>
+      <path class="word-thin" d="M314 38 V86 C314 122 338 142 370 142 C402 142 426 122 426 86 V38"/>
+      <path class="word-thin" d="M514 142 V58 C514 30 534 12 566 12 C598 12 618 30 618 58 V142"/>
+      <path class="word-thin" d="M692 0 V136"/>
+      <path class="word-thin" d="M658 48 H734"/>
+      <path class="word-thin" d="M818 88 H922 C916 44 884 12 842 12 C796 12 764 44 764 78 C764 116 794 142 842 142 C870 142 894 132 912 112"/>
+      <text x="764" y="-22" class="small">Space Design</text>
+    </g>
+    <line x1="54" y1="430" x2="768" y2="430" class="guide"/>
+  </g>
+</svg>

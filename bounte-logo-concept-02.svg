@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900">
+  <defs>
+    <style>
+      .word {
+        fill: none;
+        stroke: #2d2927;
+        stroke-width: 19;
+        stroke-linecap: butt;
+        stroke-linejoin: round;
+      }
+
+      .descriptor {
+        fill: #2d2927;
+        font-family: "Helvetica Neue", Arial, sans-serif;
+        font-size: 28px;
+        font-weight: 600;
+        letter-spacing: 0;
+      }
+    </style>
+  </defs>
+
+  <rect width="1600" height="900" fill="#aaa093"/>
+
+  <g transform="translate(287 374)">
+    <!-- B -->
+    <path class="word" d="M0 0 V136"/>
+    <path class="word" d="M0 0 H56 C88 0 108 18 108 45 C108 72 88 88 56 88 H16"/>
+    <path class="word" d="M16 68 H64 C102 68 126 88 126 112 C126 136 102 150 62 150 H0"/>
+
+    <!-- o -->
+    <path class="word" d="M211 28 A54 54 0 1 0 247 28"/>
+
+    <!-- u -->
+    <path class="word" d="M322 36 V88 C322 124 347 146 381 146 C415 146 440 124 440 88 V36"/>
+
+    <!-- n -->
+    <path class="word" d="M520 146 V67 C520 42 540 25 572 25 C607 25 628 46 628 77 V146"/>
+
+    <!-- t -->
+    <path class="word" d="M713 0 V140"/>
+    <path class="word" d="M674 45 H752"/>
+
+    <!-- e -->
+    <path class="word" d="M840 86 H948"/>
+    <path class="word" d="M948 86 C944 48 917 25 879 25 C835 25 806 54 806 86 C806 121 835 146 881 146 C909 146 931 136 947 116"/>
+
+    <g transform="translate(1038 -10)">
+      <text class="descriptor" x="0" y="0">Space</text>
+      <text class="descriptor" x="0" y="35">Design</text>
+    </g>
+  </g>
+</svg>
