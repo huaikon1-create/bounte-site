@@ -3,6 +3,7 @@ import type { ReactNode } from "react";
 import "./globals.css";
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://bounte-design-yw.dasenya66.chatgpt.site"),
   title: "朔果 · Bounte 空间设计",
   description: "朔果 Bounte 空间设计工作室官方网站与住宅设计案例。",
   openGraph: {
