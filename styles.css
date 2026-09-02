@@ -971,6 +971,22 @@ button {
   background: #e9e9e9;
 }
 
+.works-visual img,
+.project-card img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 750ms var(--ease);
+}
+
+.works-item:hover .works-visual img,
+.works-item:focus-visible .works-visual img,
+.project-card:hover img,
+.project-card:focus-visible img {
+  transform: scale(1.025);
+}
+
 .works-visual::after {
   position: absolute;
   inset: 0;
@@ -1254,6 +1270,14 @@ button {
   background: #ededeb;
 }
 
+.project-media-image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  min-height: 100%;
+  object-fit: cover;
+}
+
 .project-lead-media {
   padding: 13px 49px 0;
   background: #fff;
@@ -1301,6 +1325,11 @@ button {
 
 .project-lead-media .project-placeholder {
   min-height: min(720px, 60vw);
+}
+
+.project-lead-media .project-media-image {
+  aspect-ratio: 16 / 9;
+  max-height: min(720px, 60vw);
 }
 
 .project-overview {
@@ -1392,6 +1421,10 @@ button {
   grid-template-columns: 0.82fr 1.18fr;
 }
 
+.project-media-grid-effects:has(.project-media-slot:nth-child(4)) {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
 .project-media-grid-effects .project-media-slot:nth-child(1),
 .project-media-grid-effects .project-media-slot:nth-child(2) {
   min-height: 590px;
@@ -1400,6 +1433,10 @@ button {
 .project-media-wide {
   grid-column: 1 / -1;
   min-height: 680px;
+}
+
+.project-media-grid-effects .project-media-slot:nth-child(n + 3) {
+  min-height: 520px;
 }
 
 .project-plan-media {
