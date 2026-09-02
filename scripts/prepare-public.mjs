@@ -4,6 +4,7 @@ import { resolve } from "node:path";
 const root = resolve(import.meta.dirname, "..");
 const output = resolve(root, "public");
 const files = [
+  "CNAME",
   "index.html",
   "services.html",
   "works.html",
