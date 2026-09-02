@@ -209,14 +209,37 @@ if (heroMedia && project.media?.hero) {
 
 const effectsMedia = document.querySelector("[data-project-effects-media]");
 if (effectsMedia && project.media?.effects) {
-  effectsMedia.replaceChildren(...project.media.effects.map((src, index) => {
+  const effectFigures = project.media.effects.map((src, index) => {
     const figure = document.createElement("figure");
     figure.className = "project-media-slot";
-    figure.append(createMediaImage(src, `${project.title} 项目效果图 ${index + 1}`, (ratio) => {
-      figure.classList.toggle("project-media-wide", ratio >= 1.2);
-    }));
-    return figure;
-  }));
+    const image = createMediaImage(src, `${project.title} 项目效果图 ${index + 1}`);
+    image.loading = "eager";
+    figure.append(image);
+    return { figure, image, index };
+  });
+
+  effectsMedia.replaceChildren(...effectFigures.map(({ figure }) => figure));
+
+  // Wait for dimensions so horizontal images can lead the gallery without cropping.
+  Promise.all(effectFigures.map(({ image }) => new Promise((resolve) => {
+    if (image.complete) {
+      resolve();
+      return;
+    }
+    image.addEventListener("load", resolve, { once: true });
+    image.addEventListener("error", resolve, { once: true });
+  }))).then(() => {
+    const horizontalFirst = [...effectFigures].sort((a, b) => {
+      const aWide = a.image.naturalWidth / a.image.naturalHeight >= 1.2;
+      const bWide = b.image.naturalWidth / b.image.naturalHeight >= 1.2;
+      return Number(bWide) - Number(aWide) || a.index - b.index;
+    });
+
+    horizontalFirst.forEach(({ figure, image }) => {
+      figure.classList.toggle("project-media-wide", image.naturalWidth / image.naturalHeight >= 1.2);
+    });
+    effectsMedia.replaceChildren(...horizontalFirst.map(({ figure }) => figure));
+  });
 }
 
 const nextLink = document.querySelector("[data-next-project]");
