@@ -8,8 +8,8 @@
   },
   "scripts": {
     "prepare:public": "node scripts/prepare-public.mjs",
-    "dev": "pnpm run prepare:public && vinext dev",
-    "build": "pnpm run prepare:public && vinext build",
+    "dev": "node scripts/prepare-public.mjs && vinext dev",
+    "build": "node scripts/prepare-public.mjs && vinext build",
     "start": "wrangler dev --config dist/server/wrangler.json"
   },
   "dependencies": {
