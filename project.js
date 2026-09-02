@@ -189,13 +189,16 @@ setText("[data-next-project-title]", nextProject.title);
 document.body.dataset.projectTone = project.tone;
 document.title = `${project.title} | 朔果 · Bounte`;
 
-const createMediaImage = (src, alt) => {
+const createMediaImage = (src, alt, onLoad) => {
   const image = document.createElement("img");
-  image.src = src;
   image.alt = alt;
   image.loading = "lazy";
   image.decoding = "async";
   image.className = "project-media-image";
+  if (onLoad) {
+    image.addEventListener("load", () => onLoad(image.naturalWidth / image.naturalHeight), { once: true });
+  }
+  image.src = src;
   return image;
 };
 
@@ -209,7 +212,9 @@ if (effectsMedia && project.media?.effects) {
   effectsMedia.replaceChildren(...project.media.effects.map((src, index) => {
     const figure = document.createElement("figure");
     figure.className = "project-media-slot";
-    figure.append(createMediaImage(src, `${project.title} 项目效果图 ${index + 1}`));
+    figure.append(createMediaImage(src, `${project.title} 项目效果图 ${index + 1}`, (ratio) => {
+      figure.classList.toggle("project-media-wide", ratio >= 1.2);
+    }));
     return figure;
   }));
 }
